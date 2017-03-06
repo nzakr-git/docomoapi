@@ -12,10 +12,10 @@ module.exports = (robot) ->
   robot.respond /(\S+)/i, (msg) ->
     DOCOMO_API_KEY = process.env.DOCOMO_API_KEY
     message = msg.match[1]
-    msg.send '実行できています'
     url = 'https://api.apigw.smt.docomo.ne.jp/dialogue/v1/dialogue?APIKEY=' + DOCOMO_API_KEY
+    msg.send '実行できています'
 
-    # request = require('request');
+    request = require('request');
     # request.post
     #   url: url
     #   json:
