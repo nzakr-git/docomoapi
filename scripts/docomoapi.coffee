@@ -17,11 +17,8 @@ module.exports = (robot) ->
     request = require('request');
     request.post
       url: url
-      headers: {
-        'content-type': 'application/json'
-      }
       json:
         utt: message
       , (err, response, body) ->
-        msg.send '実行できています'
-        #msg.send body.utt
+        console.log(err);
+        #msg.send err
