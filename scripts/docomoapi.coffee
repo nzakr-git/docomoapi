@@ -15,11 +15,10 @@ module.exports = (robot) ->
     url = 'https://api.apigw.smt.docomo.ne.jp/dialogue/v1/dialogue?APIKEY=' + DOCOMO_API_KEY
 
     request = require('request');
-    console.log(request);
 
     request.post
       url: url
       json:
         utt: message
       , (err, response, body) ->
-        #msg.send body.utt
+        msg.send body.utt
