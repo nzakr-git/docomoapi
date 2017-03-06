@@ -17,6 +17,9 @@ module.exports = (robot) ->
     request = require('request');
     request.post
       url: url
+      headers: {
+        'content-type': 'application/json'
+      }
       json:
         utt: message
       , (err, response, body) ->
