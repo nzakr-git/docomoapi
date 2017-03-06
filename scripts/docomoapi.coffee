@@ -10,16 +10,15 @@
 
 module.exports = (robot) ->
   robot.respond /(\S+)/i, (msg) ->
-    DOCOMO_API_KEY = process.env.DOCOMO_API_KEY
-    message = msg.match[1]
-    url = 'https://api.apigw.smt.docomo.ne.jp/dialogue/v1/dialogue?APIKEY=' + DOCOMO_API_KEY
-
-    request = require('request');
     msg.send '実行できています'
+    # DOCOMO_API_KEY = process.env.DOCOMO_API_KEY
+    # message = msg.match[1]
+    # url = 'https://api.apigw.smt.docomo.ne.jp/dialogue/v1/dialogue?APIKEY=' + DOCOMO_API_KEY
+    # request = require('request');
 
-    request.post
-      url: url
-      json:
-        utt: message
-      , (err, response, body) ->
+    # request.post
+    #   url: url
+    #   json:
+    #     utt: message
+    #   , (err, response, body) ->
         #msg.send body.utt
